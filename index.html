@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" placeholder="Enter Your Marks" id="marks" />
+    <button onclick="myGrade()">Save</button>
+    <p style="color: red" id="result">Your Grade</p>
+  </body>
+  <script>
+    function myGrade() {
+      let marks = document.getElementById("marks").value;
+      switch (true) {
+        case marks >= 90 && marks <= 100:
+          result = "A";
+          break;
+        case marks >= 80 && marks <= 89:
+          result = "B";
+          break;
+        case marks >= 70 && marks <= 79:
+          result = "C";
+          break;
+        case marks >= 60 && marks <= 69:
+          result = "D";
+          break;
+        case marks >= 50 && marks <= 59:
+          result = "D";
+          break;
+        case marks >= 0 && marks <= 49:
+          result = "E";
+          break;
+        default:
+          result = "Marks are out of range";
+          break;
+      }
+      document.getElementById("result").innerHTML = result + " Grade";
+    }
+  </script>
+</html>
